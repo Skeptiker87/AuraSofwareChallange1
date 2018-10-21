@@ -1,13 +1,13 @@
 # challenge.java
 Android Studio / Java Challenge new Candidates
 
-###Author
+### Author
 Erik Böckmann
 erik.boeckmann@gmail.com
 
-###Final (alternative)
+### Final (alternative)
 This is an alternative solution for the java challange.
-Note that the preffered solution can be found at master: ***
+Note that the preffered solution can be found at master: https://github.com/Skeptiker87/AuraSofwareChallange1/tree/master
 
 This solution tries to go an more universal way.
 
