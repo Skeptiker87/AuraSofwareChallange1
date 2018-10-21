@@ -1,31 +1,32 @@
 # challenge.java
 Android Studio / Java Challenge new Candidates
 
-This is an Android Studio project. 
+###Author
+Erik Böckmann
+erik.boeckmann@gmail.com
 
-It contains a test case for the implementation of a so called Marshaller-Interface.
+###Final (alternative)
+This is an alternative solution for the java challange.
+Note that the preffered solution can be found at master: ***
 
-Its purpose is to marshal any Java Class which supports the given interface into a JSON-Object and back.
+This solution tries to go an more universal way.
 
-### Step 1 - Fork this repository into Your github account
+It's not documented in java file.
 
-* Create a personal account if You have none, its free.
+Major differnces:
+* The JSON isn't clean. It needs to hold information for Java-Classes. So it's not used in a way, JSON is made for. Here it's just used for persisting java objects.
+* JsonMarshalInterface is obsolete.
+* Can handle any Java object, but the object must have a default constructor.
+* With external libraries it could also hanlde java obects which not have a default constructor. But external libraries are restricted by the challange. (e.g. see https://www.javaspecialists.eu/archive/Issue175.html for a possible solution)
+* It can handle Collections and Maps.
+* It doesn't need special handling for JSONObject and JSONArray, cause they are treated like any other Java object.
+* It also needs special handling for primitives and for String.
+* It needs special handling for primitive wrapper objects, cause they haven't a default constructor.
+* It currently has no support for enums. But it is possible to implement.
 
-### Step 2 - Clone, compile and test Your forked project
+This version is not finished!
+At some points, it needs more refactoring. For example:
+* The function marshalFieldAsObject() should be merged with marshalJSON.
+* Arrays currently just marshalled, if they appear as fields. They should be also handled in Collections.
+* much much more...
 
-* Use Android Studio
-* Do not use Eclipse
-
-### Step 3 - Implement two methods in Class JsonMarshal
-
-public static JSONObject marshalJSON(Object object)
-
-public static boolean unmarshalJSON(Object object, JSONObject json)
-
-* Use Reflection
-* Do not use any third party code
-* Document both methods
-
-### Step 4 - Check in and commit Your solution onto github
-
-### Step 5 - Mail link to Your repository to recruiter
